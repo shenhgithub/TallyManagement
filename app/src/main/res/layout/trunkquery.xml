@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+              android:background="@color/lightgray">
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"/>
+    <ScrollView
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:background="@drawable/shape"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip">
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="车号："
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                />
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:minHeight="30.0dip"
+                android:orientation="horizontal"
+                android:padding="8.0dip"
+
+                >
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:entries="@array/trunkquery_city"
+                    android:layout_weight="2.0"
+
+                    />
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#66CCFF"
+                    />
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:entries="@array/trunkquery_letter"
+                    android:layout_weight="2.0"
+
+                    />
+                <EditText
+                    android:id="@+id/search_edt"
+                    android:layout_width="0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="3"
+                    android:background="@drawable/edittext_search"
+                    android:gravity="center"
+                    android:text="67639黄"
+                    android:layout_marginRight="5.0dip"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+                </EditText>
+
+                <Button
+
+                    android:layout_width="0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="2.0"
+                    android:text="查询"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:background="@drawable/darkblue_btn_bg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:id="@+id/search_btn"/>
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:text="操作记录："
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                />
+            <ScrollView
+                android:id="@+id/container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/header"
+                android:background="@color/white"
+
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:isScrollContainer="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="10.0dip">
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+
+
+                        >
+
+                        <TextView
+
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="货代"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_forwarder"
+                            android:textSize="@dimen/BasicTextSize"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+
+
+                        >
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="货物"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_cargo"
+                            android:textSize="@dimen/BasicTextSize"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+
+
+                        >
+
+                        <TextView
+                            android:id="@+id/bowei_7"
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="班组"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_group"
+                            android:textSize="@dimen/BasicTextSize"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+
+
+                        >
+
+                        <TextView
+
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="车号"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_vehiclenum"
+                            android:textSize="@dimen/BasicTextSize"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/trunkquery_letter"
+                        android:textColor="@color/black"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <LinearLayout
+                        android:id="@+id/table_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="件数"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <TextView
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_case"
+                            android:textSize="@dimen/BasicTextSize"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#66CCFF"
+                        />
+                    <LinearLayout
+                        android:id="@+id/table_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="30.0dip"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+
+
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="记录"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize"/>
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#66CCFF"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="3.0"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
